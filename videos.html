@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos — AFTERBURNER</title>
+  <meta name="description" content="Aerospace and defence video intelligence, documentaries and analysis from AFTERBURNER." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-label">⚡ LIVE FEED</div>
+  <div class="ticker-track">
+    <span class="ticker-item">New AFTERBURNER documentary: Inside NATO's Eastern Flank</span>
+    <span class="ticker-item">Watch: B-21 Raider first public flight footage</span>
+    <span class="ticker-item">Live webinar: Future Combat Air Systems — Apr 22</span>
+    <span class="ticker-item">Watch: Ukraine drone warfare — full documentary</span>
+    <span class="ticker-item">New series: The Space Race 2.0 — Episode 1 now live</span>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">AFTER<span>BURNER</span></div>
+      <div class="logo-tagline">Aerospace &amp; Defence Intelligence</div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="articles.html" class="nav-link"><span class="nav-icon">📰</span> Articles</a></li>
+      <li><a href="videos.html" class="nav-link active"><span class="nav-icon">🎬</span> Videos</a></li>
+      <li><a href="podcasts.html" class="nav-link"><span class="nav-icon">🎙️</span> Podcasts</a></li>
+      <li><a href="data.html" class="nav-link"><span class="nav-icon">📊</span> Data</a></li>
+      <li><a href="presentations.html" class="nav-link"><span class="nav-icon">📽️</span> Presentations</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button class="search-btn" id="searchBtn">🔍</button>
+      <a href="index.html#newsletter" class="btn btn-orange btn-sm">Get The Brief</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input class="search-input" id="searchInput" type="text" placeholder="Search videos..." />
+    <button class="search-close" id="searchClose">✕</button>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <div>
+          <div class="page-hero-label">🎬 Video Intelligence</div>
+          <h1 class="page-hero-title">Videos</h1>
+          <p class="page-hero-sub">In-depth documentaries, briefings, expert interviews and analysis pieces — the defence world's most important stories told visually.</p>
+        </div>
+      </div>
+      <div class="filter-bar mt-24">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Documentaries</button>
+        <button class="filter-btn">Briefings</button>
+        <button class="filter-btn">Interviews</button>
+        <button class="filter-btn">Air Power</button>
+        <button class="filter-btn">Land</button>
+        <button class="filter-btn">Naval</button>
+        <button class="filter-btn">Space</button>
+        <button class="filter-btn">Technology</button>
+      </div>
+    </div>
+
+    <!-- FEATURED VIDEO -->
+    <div style="margin-bottom:40px">
+      <div style="background:var(--bg-card);border-radius:14px;border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:1fr 380px;gap:0" class="featured-video-wrap">
+        <div style="position:relative;cursor:pointer" onclick="showToast('▶ Playing: Inside the F-47 — Full Documentary')">
+          <div style="width:100%;height:360px;background:linear-gradient(135deg,#0a1428,#1a2a4a);display:flex;align-items:center;justify-content:center;font-size:96px;">✈️</div>
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;">
+            <div style="width:80px;height:80px;background:rgba(255,87,34,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 4px 32px rgba(255,87,34,0.5);">▶</div>
+          </div>
+          <div style="position:absolute;bottom:12px;right:14px;background:rgba(0,0,0,0.8);font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;">48:12</div>
+          <div style="position:absolute;top:12px;left:12px;"><span class="badge badge-orange">DOCUMENTARY</span></div>
+        </div>
+        <div style="padding:32px;display:flex;flex-direction:column;justify-content:center;">
+          <span class="badge badge-orange" style="width:fit-content;margin-bottom:12px">Featured</span>
+          <h2 style="font-family:var(--font-display);font-size:26px;font-weight:800;line-height:1.2;margin-bottom:12px">Inside the F-47: A Year Tracking America's Most Secret Fighter</h2>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px">Our investigation into the NGAD programme — from the leaked CDR documents to exclusive interviews with former programme managers. This is the definitive account of what flying in 2030 will look like.</p>
+          <div style="font-size:13px;color:var(--text-muted);margin-bottom:20px">
+            Marcus Webb &nbsp;·&nbsp; Apr 18, 2026 &nbsp;·&nbsp; 🎧 284K views
+          </div>
+          <button class="btn btn-orange" onclick="showToast('▶ Playing full documentary...')">▶ Watch Documentary</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO GRID -->
+    <div class="section-header">
+      <h2 class="section-title">Latest Videos</h2>
+    </div>
+
+    <div class="grid-4" style="margin-bottom:40px">
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#0d1526,#1a2a4a);">✈️</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">14:32</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-orange" style="font-size:9px">Air Power</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">Inside the F-47: What the CDR Results Actually Tell Us</div>
+          <div class="video-meta">Marcus Webb &nbsp;·&nbsp; 48K views &nbsp;·&nbsp; Apr 18</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#1a0a00,#2a1500);">🛡️</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">22:17</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-orange" style="font-size:9px">Land</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">Ukraine's Drone Tactics: The Lessons Every Army Is Copying</div>
+          <div class="video-meta">Dmitri Volkov &nbsp;·&nbsp; 125K views &nbsp;·&nbsp; Apr 17</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#00101a,#001a2a);">⚓</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">18:05</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-blue" style="font-size:9px">Naval</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">Carrier Strike: How a CSG Actually Projects Power</div>
+          <div class="video-meta">James Hartley &nbsp;·&nbsp; 72K views &nbsp;·&nbsp; Apr 17</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#0a001a,#15002a);">🛰️</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">09:44</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-purple" style="font-size:9px">Space</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">The Space Force's Secret Weapon: Orbital Warfare 101</div>
+          <div class="video-meta">Priya Nair &nbsp;·&nbsp; 91K views &nbsp;·&nbsp; Apr 16</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#0a1a0a,#1a3a1a);">💻</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">31:20</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-green" style="font-size:9px">Cyber</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">Cyber Warfare in 2026: A Briefing for Decision Makers</div>
+          <div class="video-meta">Priya Nair &nbsp;·&nbsp; 56K views &nbsp;·&nbsp; Apr 14</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#1a1500,#2a2200);">🚁</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">16:48</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-orange" style="font-size:9px">Air Power</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">Tiltrotor vs Helicopter: Why the V-280 Changes Everything</div>
+          <div class="video-meta">Sarah Callahan &nbsp;·&nbsp; 43K views &nbsp;·&nbsp; Apr 12</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#001a1a,#002a2a);">🌊</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">27:55</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-blue" style="font-size:9px">Naval</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">AUKUS Submarines: The $360bn Question Answered</div>
+          <div class="video-meta">James Hartley &nbsp;·&nbsp; 88K views &nbsp;·&nbsp; Apr 10</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="showToast('▶ Playing video...')">
+        <div class="video-thumb">
+          <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#1a001a,#2a002a);">🤖</div>
+          <div class="play-btn">▶</div>
+          <div class="video-duration">19:30</div>
+          <div style="position:absolute;top:8px;left:8px"><span class="badge badge-purple" style="font-size:9px">Technology</span></div>
+        </div>
+        <div class="video-body">
+          <div class="video-title">Autonomous Weapons: The Documentary Governments Don't Want You to See</div>
+          <div class="video-meta">Elena Marchetti &nbsp;·&nbsp; 210K views &nbsp;·&nbsp; Apr 8</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-bottom:56px">
+      <button class="btn btn-ghost btn-lg" onclick="showToast('🎬 Loading more videos...')">Load More Videos</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">AFTER<span>BURNER</span></div>
+        <p class="footer-desc">The world's sharpest aerospace and defence intelligence platform.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">▶</a><a href="#" class="social-btn">♪</a><a href="#" class="social-btn">◉</a>
+        </div>
+      </div>
+      <div><div class="footer-col-title">Coverage</div><ul class="footer-links"><li><a href="articles.html" class="footer-link">Articles</a></li><li><a href="videos.html" class="footer-link">Videos</a></li><li><a href="podcasts.html" class="footer-link">Podcasts</a></li></ul></div>
+      <div><div class="footer-col-title">Topics</div><ul class="footer-links"><li><a href="articles.html" class="footer-link">Air Power</a></li><li><a href="articles.html" class="footer-link">Naval</a></li><li><a href="articles.html" class="footer-link">Space</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="#" class="footer-link">About</a></li><li><a href="#" class="footer-link">Contact</a></li><li><a href="#" class="footer-link">Advertise</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AFTERBURNER Media Ltd. All rights reserved.</div>
+      <div class="footer-badges"><span class="badge badge-blue">📰 Press Accredited</span><span class="badge badge-gold">🏆 Best Defence Outlet 2025</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

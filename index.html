@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFTERBURNER — Aerospace & Defence Intelligence</title>
+  <meta name="description" content="The world's sharpest aerospace and defence intelligence. Breaking news, analysis, data, video and podcasts for the global defence community." />
+  <meta property="og:title" content="AFTERBURNER — Aerospace & Defence Intelligence" />
+  <meta property="og:description" content="The world's sharpest aerospace and defence intelligence." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ── BREAKING NEWS BANNER ── -->
+<div class="breaking-banner">
+  <strong>⚡ BREAKING</strong>
+  NATO announces €20bn joint AI-defence initiative &nbsp;|&nbsp; Next-gen stealth platform unveiled at Paris Air Show &nbsp;|&nbsp; New hypersonic test recorded at Mach 14
+</div>
+
+<!-- ── TICKER ── -->
+<div class="ticker-bar">
+  <div class="ticker-label">⚡ LIVE FEED</div>
+  <div class="ticker-track">
+    <span class="ticker-item">F-47 NGAD programme clears CDR milestone</span>
+    <span class="ticker-item">UK carrier strike group deploys to Indo-Pacific</span>
+    <span class="ticker-item">Rheinmetall lands €4.2bn Lynx IFV contract</span>
+    <span class="ticker-item">SpaceX wins $1.8bn Space Force launch contract</span>
+    <span class="ticker-item">Israel's Iron Dome 2.0 enters live testing phase</span>
+    <span class="ticker-item">AUKUS Pillar II AI targeting trials begin</span>
+    <span class="ticker-item">Northrop Grumman B-21 Raider IOC declared</span>
+    <span class="ticker-item">EU Defence Fund releases €1.1bn tender list</span>
+    <span class="ticker-item">India orders 114 multirole fighters for IAF</span>
+    <span class="ticker-item">Boeing T-7A Red Hawk enters full-rate production</span>
+  </div>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">AFTER<span>BURNER</span></div>
+      <div class="logo-tagline">Aerospace &amp; Defence Intelligence</div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="articles.html" class="nav-link"><span class="nav-icon">📰</span> Articles</a></li>
+      <li><a href="videos.html" class="nav-link"><span class="nav-icon">🎬</span> Videos</a></li>
+      <li><a href="podcasts.html" class="nav-link"><span class="nav-icon">🎙️</span> Podcasts</a></li>
+      <li><a href="data.html" class="nav-link"><span class="nav-icon">📊</span> Data</a></li>
+      <li><a href="presentations.html" class="nav-link"><span class="nav-icon">📽️</span> Presentations</a></li>
+    </ul>
+
+    <div class="navbar-actions">
+      <button class="search-btn" id="searchBtn" title="Search (Ctrl+K)">🔍</button>
+      <a href="#newsletter" class="btn btn-orange btn-sm">Get The Brief</a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input class="search-input" id="searchInput" type="text" placeholder="Search AFTERBURNER... (e.g. 'hypersonic', 'F-35', 'NATO')" />
+    <button class="search-close" id="searchClose">✕</button>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Main story -->
+        <div class="hero-main">
+          <div style="width:100%;height:500px;background:linear-gradient(135deg,#0a1428 0%,#1a2a4a 40%,#0f1e38 100%);display:flex;align-items:center;justify-content:center;font-size:100px;">✈️</div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-meta">
+              <span class="badge badge-orange">Exclusive</span>
+              <span class="badge badge-red"><span class="live-dot"></span> Breaking</span>
+              <span class="text-small text-muted">3 minutes ago</span>
+            </div>
+            <h1 class="hero-title">F-47 NGAD: Everything We Know About America's Most Secretive Fighter Programme</h1>
+            <p class="hero-excerpt">The US Air Force's sixth-generation air dominance fighter has cleared its Critical Design Review — and our sources say the classified performance specs will rewrite the rules of air combat.</p>
+            <div class="hero-byline">
+              <span>✍️ Marcus Webb, Senior Defence Correspondent</span>
+              <span>·</span>
+              <span>⏱ 8 min read</span>
+              <span>·</span>
+              <span>🌍 Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar top stories -->
+        <div class="hero-sidebar">
+          <div class="sidebar-header">⚡ Top Stories Now</div>
+
+          <div class="sidebar-item">
+            <div class="sidebar-num">01</div>
+            <div class="sidebar-content">
+              <div class="sidebar-title">Rheinmetall secures landmark €4.2bn Lynx IFV contract with Germany's Bundeswehr</div>
+              <div class="sidebar-meta"><span class="badge badge-blue" style="font-size:9px">Land</span> &nbsp;2h ago</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <div class="sidebar-num">02</div>
+            <div class="sidebar-content">
+              <div class="sidebar-title">UK deploys second carrier strike group in historic Indo-Pacific surge</div>
+              <div class="sidebar-meta"><span class="badge badge-orange" style="font-size:9px">Naval</span> &nbsp;4h ago</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <div class="sidebar-num">03</div>
+            <div class="sidebar-content">
+              <div class="sidebar-title">AUKUS Pillar II scores breakthrough: AI targeting tested at hypersonic speeds</div>
+              <div class="sidebar-meta"><span class="badge badge-gold" style="font-size:9px">Tech</span> &nbsp;6h ago</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <div class="sidebar-num">04</div>
+            <div class="sidebar-content">
+              <div class="sidebar-title">SpaceX wins $1.8bn Space Force national security launch contract</div>
+              <div class="sidebar-meta"><span class="badge badge-purple" style="font-size:9px">Space</span> &nbsp;8h ago</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <div class="sidebar-num">05</div>
+            <div class="sidebar-content">
+              <div class="sidebar-title">India finalises 114-fighter MRFA tender — Boeing, Dassault and Eurofighter in frame</div>
+              <div class="sidebar-meta"><span class="badge badge-green" style="font-size:9px">Procurement</span> &nbsp;10h ago</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL STATS BAND -->
+  <section style="padding:0 0 40px">
+    <div class="container">
+      <div class="featured-band">
+        <div class="featured-band-inner">
+          <div class="stat-block">
+            <span class="stat-num" data-count="2400000" data-suffix="+">&mdash;</span>
+            <div class="stat-label">Monthly Readers</div>
+            <div class="stat-sublabel">Across 94 countries</div>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num orange" data-count="850" data-suffix="+">&mdash;</span>
+            <div class="stat-label">Articles Published</div>
+            <div class="stat-sublabel">This year alone</div>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num gold" data-count="340" data-suffix="K+">&mdash;</span>
+            <div class="stat-label">Newsletter Subscribers</div>
+            <div class="stat-sublabel">The Weekly Debrief</div>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num green" data-count="180" data-suffix="+">&mdash;</span>
+            <div class="stat-label">Expert Contributors</div>
+            <div class="stat-sublabel">Analysts, veterans, engineers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST ARTICLES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Latest Intelligence</h2>
+        <a href="articles.html" class="section-link">All articles →</a>
+      </div>
+
+      <div class="filter-bar mb-24">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Air</button>
+        <button class="filter-btn">Land</button>
+        <button class="filter-btn">Naval</button>
+        <button class="filter-btn">Space</button>
+        <button class="filter-btn">Cyber</button>
+        <button class="filter-btn">Technology</button>
+        <button class="filter-btn">Policy</button>
+        <button class="filter-btn">Industry</button>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="card-img" style="background:linear-gradient(135deg,#0d1f3c,#1a3a6e);display:flex;align-items:center;justify-content:center;font-size:56px;">🚀</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge badge-purple">Space</span>
+              <span class="text-muted text-xs">Apr 18, 2026</span>
+            </div>
+            <h3 class="card-title">B-21 Raider Achieves Initial Operational Capability — and It's More Capable Than Anyone Expected</h3>
+            <p class="card-excerpt">Northrop Grumman's flying wing stealth bomber has been quietly declared IOC. Sources close to the programme say its EW suite is "a generation ahead" of anything currently flying.</p>
+            <div class="card-footer">
+              <span>✍️ Sarah Callahan</span>
+              <span class="card-read-time">⏱ 6 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="card-img" style="background:linear-gradient(135deg,#1a0d00,#3a1a00);display:flex;align-items:center;justify-content:center;font-size:56px;">🛡️</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge badge-orange">Land</span>
+              <span class="badge badge-gold">Analysis</span>
+              <span class="text-muted text-xs">Apr 17, 2026</span>
+            </div>
+            <h3 class="card-title">Why Europe's Army Is Finally Getting Serious About Drone Warfare</h3>
+            <p class="card-excerpt">From Ukraine's battlefield lessons to NATO standardisation efforts — how the continent is rebuilding its land forces around autonomous systems and what that means for procurement.</p>
+            <div class="card-footer">
+              <span>✍️ Dmitri Volkov</span>
+              <span class="card-read-time">⏱ 9 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="card-img" style="background:linear-gradient(135deg,#001a1a,#003333);display:flex;align-items:center;justify-content:center;font-size:56px;">⚓</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge badge-blue">Naval</span>
+              <span class="text-muted text-xs">Apr 17, 2026</span>
+            </div>
+            <h3 class="card-title">The New Submarine Race: China, US and UK Square Up in the Deep</h3>
+            <p class="card-excerpt">Type 083, SSN-AUKUS and Virginia Block VI — three programmes, one objective. We map the next generation of nuclear submarine competition and who has the edge.</p>
+            <div class="card-footer">
+              <span>✍️ James Hartley</span>
+              <span class="card-read-time">⏱ 11 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="card-img" style="background:linear-gradient(135deg,#0a1f0a,#1a3a1a);display:flex;align-items:center;justify-content:center;font-size:56px;">💻</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge badge-green">Cyber</span>
+              <span class="text-muted text-xs">Apr 16, 2026</span>
+            </div>
+            <h3 class="card-title">AI-Powered Cyber: How the Pentagon's CDAO Is Rewiring Digital Warfare</h3>
+            <p class="card-excerpt">The Chief Digital and AI Office has been given its biggest mandate yet. We go inside the plan to embed AI decision tools across all warfighting domains.</p>
+            <div class="card-footer">
+              <span>✍️ Priya Nair</span>
+              <span class="card-read-time">⏱ 7 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="card-img" style="background:linear-gradient(135deg,#1a1a00,#3a3a00);display:flex;align-items:center;justify-content:center;font-size:56px;">🛰️</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge badge-gold">Industry</span>
+              <span class="text-muted text-xs">Apr 16, 2026</span>
+            </div>
+            <h3 class="card-title">Defence Budgets Hit $2.4 Trillion Globally — Where Is the Money Actually Going?</h3>
+            <p class="card-excerpt">SIPRI's latest data is out and the numbers are eye-watering. We break down the biggest movers, the surprise spenders and the regions that are quietly rearming.</p>
+            <div class="card-footer">
+              <span>✍️ Elena Marchetti</span>
+              <span class="card-read-time">⏱ 5 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="card-img" style="background:linear-gradient(135deg,#1a001a,#3a003a);display:flex;align-items:center;justify-content:center;font-size:56px;">🤖</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge badge-purple">Technology</span>
+              <span class="badge badge-orange" style="font-size:9px">Hot Take</span>
+              <span class="text-muted text-xs">Apr 15, 2026</span>
+            </div>
+            <h3 class="card-title">The Lethal Autonomous Weapons Debate Is Over — And Nobody Noticed It End</h3>
+            <p class="card-excerpt">While policymakers debated in Geneva, engineers shipped. Our guest columnist argues LAWS are already here and the question is no longer if, but who gets to pull the trigger.</p>
+            <div class="card-footer">
+              <span>✍️ Col. (Ret.) T. Briggs</span>
+              <span class="card-read-time">⏱ 10 min</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOT TAKES -->
+  <section style="padding:0 0 48px">
+    <div class="container">
+      <div class="hot-takes">
+        <div class="hot-takes-title">🔥 Hot Takes</div>
+        <div class="hot-takes-sub">Our analysts, unfiltered. Agree? Disagree? That's the point.</div>
+        <div class="hot-take-list">
+
+          <div class="hot-take-item">
+            <div class="hot-take-emoji">💣</div>
+            <div class="hot-take-content">
+              <div class="hot-take-headline">The F-35 is already obsolete — and the US Air Force knows it</div>
+              <div class="hot-take-sub">Marcus Webb argues the JSF's radar cross-section will be its undoing against 6th-gen adversaries by 2030</div>
+            </div>
+            <div class="hot-take-badge"><span class="badge badge-orange">Opinion</span></div>
+          </div>
+
+          <div class="hot-take-item">
+            <div class="hot-take-emoji">🤯</div>
+            <div class="hot-take-content">
+              <div class="hot-take-headline">NATO's 2% GDP target is a PR exercise, not a strategy</div>
+              <div class="hot-take-sub">Elena Marchetti on why counting cash misses the point entirely when allies can't even share ammunition standards</div>
+            </div>
+            <div class="hot-take-badge"><span class="badge badge-red">Controversial</span></div>
+          </div>
+
+          <div class="hot-take-item">
+            <div class="hot-take-emoji">🚀</div>
+            <div class="hot-take-content">
+              <div class="hot-take-headline">Commercial space is eating defence space's lunch — and the Pentagon should say thank you</div>
+              <div class="hot-take-sub">Why SpaceX and Rocket Lab are delivering more strategic value than EELV ever did, at a fraction of the cost</div>
+            </div>
+            <div class="hot-take-badge"><span class="badge badge-blue">Analysis</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Video Intelligence</h2>
+        <a href="videos.html" class="section-link">All videos →</a>
+      </div>
+
+      <div class="grid-4">
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#0d1526,#1a2a4a);">✈️</div>
+            <div class="play-btn">▶</div>
+            <div class="video-duration">14:32</div>
+          </div>
+          <div class="video-body">
+            <div class="card-meta mb-8"><span class="badge badge-orange">Air Power</span></div>
+            <div class="video-title">Inside the F-47: What the CDR Results Actually Tell Us</div>
+            <div class="video-meta">Marcus Webb &nbsp;·&nbsp; 48K views</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#1a0a00,#2a1500);">🛡️</div>
+            <div class="play-btn">▶</div>
+            <div class="video-duration">22:17</div>
+          </div>
+          <div class="video-body">
+            <div class="card-meta mb-8"><span class="badge badge-orange">Land</span></div>
+            <div class="video-title">Ukraine's Drone Tactics: The Lessons Every Army Is Copying</div>
+            <div class="video-meta">Dmitri Volkov &nbsp;·&nbsp; 125K views</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#00101a,#001a2a);">⚓</div>
+            <div class="play-btn">▶</div>
+            <div class="video-duration">18:05</div>
+          </div>
+          <div class="video-body">
+            <div class="card-meta mb-8"><span class="badge badge-blue">Naval</span></div>
+            <div class="video-title">Carrier Strike: How a CSG Actually Projects Power</div>
+            <div class="video-meta">James Hartley &nbsp;·&nbsp; 72K views</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="video-thumb-img" style="display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#0a001a,#15002a);">🛰️</div>
+            <div class="play-btn">▶</div>
+            <div class="video-duration">09:44</div>
+          </div>
+          <div class="video-body">
+            <div class="card-meta mb-8"><span class="badge badge-purple">Space</span></div>
+            <div class="video-title">The Space Force's Secret Weapon: Orbital Warfare 101</div>
+            <div class="video-meta">Priya Nair &nbsp;·&nbsp; 91K views</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCASTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Podcast Feed</h2>
+        <a href="podcasts.html" class="section-link">All episodes →</a>
+      </div>
+
+      <div class="grid-2">
+
+        <div class="podcast-card">
+          <div class="podcast-art" style="background:linear-gradient(135deg,#1a0d2e,#2d1a4a);">🎙️</div>
+          <div class="podcast-info">
+            <div class="podcast-show">The Afterburner Podcast · Ep. 147</div>
+            <div class="podcast-title">General (Ret.) David Walsh on the Future of Multi-Domain Operations</div>
+            <div class="podcast-meta">
+              <span>⏱ 58 min</span>
+              <span>·</span>
+              <span>Apr 17, 2026</span>
+              <span>·</span>
+              <span>🎧 34K plays</span>
+            </div>
+          </div>
+          <div class="podcast-play">▶</div>
+        </div>
+
+        <div class="podcast-card">
+          <div class="podcast-art" style="background:linear-gradient(135deg,#002a1a,#004a2a);">💡</div>
+          <div class="podcast-info">
+            <div class="podcast-show">Tech Debrief · Ep. 89</div>
+            <div class="podcast-title">Is AI Really Ready for the Battlefield? We Ask the People Building It</div>
+            <div class="podcast-meta">
+              <span>⏱ 44 min</span>
+              <span>·</span>
+              <span>Apr 15, 2026</span>
+              <span>·</span>
+              <span>🎧 21K plays</span>
+            </div>
+          </div>
+          <div class="podcast-play">▶</div>
+        </div>
+
+        <div class="podcast-card">
+          <div class="podcast-art" style="background:linear-gradient(135deg,#1a1500,#2a2200);">🌍</div>
+          <div class="podcast-info">
+            <div class="podcast-show">Global Security Brief · Ep. 62</div>
+            <div class="podcast-title">Post-Ukraine Europe: How the Continent Is Rebuilding Its Defence Industrial Base</div>
+            <div class="podcast-meta">
+              <span>⏱ 52 min</span>
+              <span>·</span>
+              <span>Apr 12, 2026</span>
+              <span>·</span>
+              <span>🎧 18K plays</span>
+            </div>
+          </div>
+          <div class="podcast-play">▶</div>
+        </div>
+
+        <div class="podcast-card">
+          <div class="podcast-art" style="background:linear-gradient(135deg,#1a0000,#2a0000);">🚀</div>
+          <div class="podcast-info">
+            <div class="podcast-show">Space Brief · Ep. 33</div>
+            <div class="podcast-title">Starshield vs. the Alternatives: Commercialising the Military Space Race</div>
+            <div class="podcast-meta">
+              <span>⏱ 38 min</span>
+              <span>·</span>
+              <span>Apr 10, 2026</span>
+              <span>·</span>
+              <span>🎧 15K plays</span>
+            </div>
+          </div>
+          <div class="podcast-play">▶</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Data & Intelligence</h2>
+        <a href="data.html" class="section-link">Full dashboard →</a>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="data-card">
+          <div class="data-card-header">
+            <div>
+              <div class="data-card-title">Defence Budgets 2026</div>
+              <div class="text-small text-muted">Top 8 nations, USD billions</div>
+            </div>
+            <span class="badge badge-blue">SIPRI</span>
+          </div>
+          <div class="chart-bar-list">
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇺🇸 USA</span><span>$916bn</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:100%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇨🇳 China</span><span>$296bn</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:32%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇷🇺 Russia</span><span>$109bn</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:12%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇬🇧 UK</span><span>$74bn</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:8%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇩🇪 Germany</span><span>$66bn</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:7%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="data-card">
+          <div class="data-card-header">
+            <div>
+              <div class="data-card-title">Active Combat Aircraft</div>
+              <div class="text-small text-muted">5th + 6th generation, by nation</div>
+            </div>
+            <span class="badge badge-orange">Fleet</span>
+          </div>
+          <div class="chart-bar-list">
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇺🇸 F-35 (All variants)</span><span>680+</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:100%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇨🇳 J-20 Mighty Dragon</span><span>200+</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:29%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇺🇸 F-22 Raptor</span><span>186</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:27%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇷🇺 Su-57 Felon</span><span>24</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:4%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇰🇷 KF-21 Boramae</span><span>12</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-green" style="width:2%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="data-card">
+          <div class="data-card-header">
+            <div>
+              <div class="data-card-title">Hypersonic Programmes</div>
+              <div class="text-small text-muted">Operational & in development</div>
+            </div>
+            <span class="badge badge-red">Live Tracker</span>
+          </div>
+          <div class="chart-bar-list">
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇨🇳 China</span><span>4 operational</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:80%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇷🇺 Russia</span><span>3 operational</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:60%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇺🇸 USA</span><span>2 in dev.</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:40%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇮🇳 India</span><span>1 in dev.</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:20%"></div></div>
+            </div>
+            <div class="chart-bar-item">
+              <div class="chart-bar-label"><span>🇬🇧 UK / AUKUS</span><span>1 planned</span></div>
+              <div class="chart-bar-track"><div class="chart-bar-fill bar-green" style="width:10%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" style="padding:0 0 48px">
+    <div class="container">
+      <div class="newsletter-section">
+        <div class="newsletter-eyebrow">📬 The Weekly Debrief</div>
+        <h2 class="newsletter-title">Intelligence. <span>Ignited.</span></h2>
+        <p class="newsletter-sub">
+          Join 340,000+ defence professionals, analysts and enthusiasts who get our twice-weekly briefing. Sharp analysis, no fluff, occasionally irreverent. Always essential.
+        </p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input class="newsletter-input" type="email" placeholder="your.email@organisation.com" />
+          <button class="btn btn-orange btn-lg" type="submit">Subscribe Free</button>
+        </form>
+        <div class="newsletter-note">No spam. Unsubscribe any time. Read by 94 countries.</div>
+        <div class="newsletter-features">
+          <div class="newsletter-feat"><span>📰</span><span>Twice-weekly briefing</span></div>
+          <div class="newsletter-feat"><span>📊</span><span>Exclusive data sets</span></div>
+          <div class="newsletter-feat"><span>🎙️</span><span>Podcast highlights</span></div>
+          <div class="newsletter-feat"><span>🔥</span><span>Hot Takes only subscribers see</span></div>
+          <div class="newsletter-feat"><span>🌍</span><span>Global coverage</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo">AFTER<span>BURNER</span></div>
+        <p class="footer-desc">The world's sharpest aerospace and defence intelligence platform. Breaking news, deep analysis, data and multimedia from the front lines of the global defence community.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" title="X / Twitter">𝕏</a>
+          <a href="#" class="social-btn" title="LinkedIn">in</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="Spotify">♪</a>
+          <a href="#" class="social-btn" title="RSS Feed">◉</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Coverage</div>
+        <ul class="footer-links">
+          <li><a href="articles.html" class="footer-link">Air Power</a></li>
+          <li><a href="articles.html" class="footer-link">Land Warfare</a></li>
+          <li><a href="articles.html" class="footer-link">Naval & Maritime</a></li>
+          <li><a href="articles.html" class="footer-link">Space & Satellite</a></li>
+          <li><a href="articles.html" class="footer-link">Cyber & Electronic Warfare</a></li>
+          <li><a href="articles.html" class="footer-link">Procurement & Industry</a></li>
+          <li><a href="articles.html" class="footer-link">Policy & Strategy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Media</div>
+        <ul class="footer-links">
+          <li><a href="videos.html" class="footer-link">Videos</a></li>
+          <li><a href="podcasts.html" class="footer-link">Podcasts</a></li>
+          <li><a href="presentations.html" class="footer-link">Presentations</a></li>
+          <li><a href="data.html" class="footer-link">Data & Dashboards</a></li>
+          <li><a href="#" class="footer-link">Webinars</a></li>
+          <li><a href="#" class="footer-link">Newsletter Archive</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">About AFTERBURNER</a></li>
+          <li><a href="#" class="footer-link">Our Team</a></li>
+          <li><a href="#" class="footer-link">Advertise With Us</a></li>
+          <li><a href="#" class="footer-link">Write For Us</a></li>
+          <li><a href="#" class="footer-link">Press &amp; Media</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 AFTERBURNER Media Ltd. All rights reserved. All analysis is independent editorial.</div>
+      <div class="footer-badges">
+        <span class="badge badge-blue">📰 Press Accredited</span>
+        <span class="badge badge-gold">🏆 Best Defence Outlet 2025</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

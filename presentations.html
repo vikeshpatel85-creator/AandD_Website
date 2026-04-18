@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentations — AFTERBURNER</title>
+  <meta name="description" content="Aerospace and defence presentations, slide decks and briefing papers from AFTERBURNER's global expert community." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .conf-card {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg);
+      padding:24px; display:flex; gap:20px; align-items:flex-start;
+    }
+    .conf-icon { font-size:36px; flex-shrink:0; }
+    .conf-info { flex:1; }
+    .conf-name { font-size:16px; font-weight:700; margin-bottom:4px; }
+    .conf-date { font-size:13px; color:var(--accent-blue); font-weight:600; margin-bottom:6px; }
+    .conf-desc { font-size:13px; color:var(--text-secondary); line-height:1.5; }
+    .conf-action { flex-shrink:0; }
+    .pres-featured {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg);
+      overflow:hidden; display:grid; grid-template-columns:1fr 360px; gap:0; margin-bottom:40px;
+    }
+    .pres-featured-cover {
+      height:100%; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:80px;
+    }
+    .pres-featured-body { padding:32px; display:flex; flex-direction:column; justify-content:center; }
+    @media(max-width:768px){ .pres-featured{grid-template-columns:1fr;} .conf-card{flex-direction:column;} }
+  </style>
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-label">⚡ EVENTS</div>
+  <div class="ticker-track">
+    <span class="ticker-item">Paris Air Show 2026 — June 16-22 · Le Bourget</span>
+    <span class="ticker-item">DSEI 2026 — September 9-12 · London ExCeL</span>
+    <span class="ticker-item">Farnborough Airshow 2026 — July 20-24</span>
+    <span class="ticker-item">Eurosatory 2026 — November, Paris</span>
+    <span class="ticker-item">New presentation: GCAP 2035 — Implications for Allied Air Power</span>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">AFTER<span>BURNER</span></div>
+      <div class="logo-tagline">Aerospace &amp; Defence Intelligence</div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="articles.html" class="nav-link"><span class="nav-icon">📰</span> Articles</a></li>
+      <li><a href="videos.html" class="nav-link"><span class="nav-icon">🎬</span> Videos</a></li>
+      <li><a href="podcasts.html" class="nav-link"><span class="nav-icon">🎙️</span> Podcasts</a></li>
+      <li><a href="data.html" class="nav-link"><span class="nav-icon">📊</span> Data</a></li>
+      <li><a href="presentations.html" class="nav-link active"><span class="nav-icon">📽️</span> Presentations</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button class="search-btn" id="searchBtn">🔍</button>
+      <a href="index.html#newsletter" class="btn btn-orange btn-sm">Get The Brief</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input class="search-input" id="searchInput" type="text" placeholder="Search presentations..." />
+    <button class="search-close" id="searchClose">✕</button>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="page-hero">
+      <div>
+        <div class="page-hero-label">📽️ Slide Intelligence</div>
+        <h1 class="page-hero-title">Presentations</h1>
+        <p class="page-hero-sub">Conference slide decks, expert briefings and research papers from the world's top aerospace and defence events — curated and hosted in one place.</p>
+      </div>
+      <div class="filter-bar mt-24">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Strategy</button>
+        <button class="filter-btn">Technology</button>
+        <button class="filter-btn">Industry</button>
+        <button class="filter-btn">Policy</button>
+        <button class="filter-btn">Air Power</button>
+        <button class="filter-btn">Naval</button>
+        <button class="filter-btn">Space</button>
+        <button class="filter-btn">AI & Autonomy</button>
+      </div>
+    </div>
+
+    <!-- FEATURED PRESENTATION -->
+    <div class="pres-featured">
+      <div class="pres-featured-cover" style="background:linear-gradient(135deg,#0a1428,#1a3a6e);">✈️</div>
+      <div class="pres-featured-body">
+        <span class="badge badge-gold" style="width:fit-content;margin-bottom:12px">Featured Briefing</span>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-gold);margin-bottom:8px">AFTERBURNER ANNUAL BRIEFING</div>
+        <h2 style="font-family:var(--font-display);font-size:28px;font-weight:800;line-height:1.2;margin-bottom:12px">Air Power in 2035: The Six Technology Shifts That Will Reshape Air Combat</h2>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px">Our flagship annual briefing — 84 slides covering directed energy, autonomous wingmen, hypersonics, next-gen cockpits, space-based ISR and multi-domain command. Required reading for anyone in the sector.</p>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:20px">Marcus Webb &nbsp;·&nbsp; 84 slides &nbsp;·&nbsp; Apr 2026 &nbsp;·&nbsp; 🔽 12,400 downloads</div>
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-orange" onclick="showToast('📥 Downloading: Air Power in 2035...')">📥 Download PDF</button>
+          <button class="btn btn-ghost" onclick="showToast('▶ Opening presentation viewer...')">▶ View Online</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRESENTATIONS GRID -->
+    <div class="section-header">
+      <h2 class="section-title">All Presentations</h2>
+    </div>
+
+    <div class="grid-4" style="margin-bottom:40px">
+
+      <div class="pres-card" onclick="showToast('📥 Opening: GCAP 2035...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#0d1f3c,#1a3a6e);">🛩️
+          <div class="pres-slides-badge">56 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">AFTERBURNER / Air Power</div>
+          <div class="pres-title">GCAP 2035: Implications for Allied Air Power and Industrial Policy</div>
+          <div class="pres-meta"><span>Marcus Webb</span><span>·</span><span>Mar 2026</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: Autonomous Systems...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#1a001a,#2a002a);">🤖
+          <div class="pres-slides-badge">48 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">DSEI 2025 / Technology</div>
+          <div class="pres-title">Autonomous Systems in Land Warfare: From Concept to Deployment</div>
+          <div class="pres-meta"><span>Dr. Anna Fischer</span><span>·</span><span>Sep 2025</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: Naval Drone Swarms...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#001a1a,#002a2a);">🌊
+          <div class="pres-slides-badge">32 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">EURONAVAL 2025 / Naval</div>
+          <div class="pres-title">Drone Swarms at Sea: The Threat to Surface Fleets and How to Counter It</div>
+          <div class="pres-meta"><span>James Hartley</span><span>·</span><span>Oct 2025</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: Space Domain...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#0a001a,#15002a);">🛰️
+          <div class="pres-slides-badge">61 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">Space Symposium 2026 / Space</div>
+          <div class="pres-title">The Weaponisation of Space: Tracking the New High Ground</div>
+          <div class="pres-meta"><span>Priya Nair</span><span>·</span><span>Apr 2026</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: European Rearmament...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#1a1500,#2a2200);">🇪🇺
+          <div class="pres-slides-badge">44 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">IISS / Policy</div>
+          <div class="pres-title">European Rearmament 2025-2030: The Industrial Bottlenecks Nobody Is Talking About</div>
+          <div class="pres-meta"><span>Elena Marchetti</span><span>·</span><span>Feb 2026</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: AI in C2...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#0a1a0a,#1a3a1a);">💻
+          <div class="pres-slides-badge">38 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">AFCEA / AI & Autonomy</div>
+          <div class="pres-title">AI in Command and Control: Opportunities, Risks and Red Lines</div>
+          <div class="pres-meta"><span>Priya Nair</span><span>·</span><span>Mar 2026</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: Defence Budget Analysis...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#1a1a00,#3a3a00);">💰
+          <div class="pres-slides-badge">29 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">AFTERBURNER / Industry</div>
+          <div class="pres-title">Global Defence Budget Outlook 2026-2030: Where the Money Is Going</div>
+          <div class="pres-meta"><span>Elena Marchetti</span><span>·</span><span>Jan 2026</span></div>
+        </div>
+      </div>
+
+      <div class="pres-card" onclick="showToast('📥 Opening: Hypersonic Threat...')">
+        <div class="pres-cover" style="background:linear-gradient(135deg,#1a0000,#2a0000);">⚡
+          <div class="pres-slides-badge">52 slides</div>
+        </div>
+        <div class="pres-body">
+          <div class="pres-org">RUSI / Technology</div>
+          <div class="pres-title">The Hypersonic Threat: Assessing the Western Response</div>
+          <div class="pres-meta"><span>Marcus Webb</span><span>·</span><span>Feb 2026</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- UPCOMING EVENTS -->
+    <div class="section-header">
+      <h2 class="section-title">Upcoming Events We're Covering</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:56px">
+
+      <div class="conf-card">
+        <div class="conf-icon">✈️</div>
+        <div class="conf-info">
+          <div class="conf-name">Paris Air Show 2026</div>
+          <div class="conf-date">June 16–22, 2026 · Le Bourget, France</div>
+          <div class="conf-desc">The world's largest air show. AFTERBURNER will have a full team on the ground — live reporting, exclusive interviews and same-day presentation uploads.</div>
+        </div>
+        <div class="conf-action"><span class="badge badge-blue">Confirmed</span></div>
+      </div>
+
+      <div class="conf-card">
+        <div class="conf-icon">🛡️</div>
+        <div class="conf-info">
+          <div class="conf-name">DSEI 2026</div>
+          <div class="conf-date">September 9–12, 2026 · London ExCeL</div>
+          <div class="conf-desc">Europe's premier defence and security event. Full coverage across all domains. Our DSEI briefing pack will be available from day one.</div>
+        </div>
+        <div class="conf-action"><span class="badge badge-blue">Confirmed</span></div>
+      </div>
+
+      <div class="conf-card">
+        <div class="conf-icon">🚀</div>
+        <div class="conf-info">
+          <div class="conf-name">Space Symposium 2026</div>
+          <div class="conf-date">April 28–May 1, 2026 · Colorado Springs, USA</div>
+          <div class="conf-desc">The pre-eminent space security conference. Priya Nair will be presenting on commercial space and national security.</div>
+        </div>
+        <div class="conf-action"><span class="badge badge-gold">This Month</span></div>
+      </div>
+
+      <div class="conf-card">
+        <div class="conf-icon">🌍</div>
+        <div class="conf-info">
+          <div class="conf-name">IISS Shangri-La Dialogue 2026</div>
+          <div class="conf-date">May 30–June 1, 2026 · Singapore</div>
+          <div class="conf-desc">Asia's top security summit. Our Indo-Pacific correspondent will provide full live coverage and analysis.</div>
+        </div>
+        <div class="conf-action"><span class="badge badge-green">Upcoming</span></div>
+      </div>
+
+    </div>
+
+    <!-- SUBMIT CTA -->
+    <div style="background:linear-gradient(135deg,#1a1500,#2a2200);border:1px solid rgba(255,193,7,0.2);border-radius:var(--radius-lg);padding:40px;text-align:center;margin-bottom:56px">
+      <div style="font-size:36px;margin-bottom:12px">📤</div>
+      <h2 style="font-family:var(--font-display);font-size:32px;font-weight:900;text-transform:uppercase;margin-bottom:10px">Got a Presentation to Share?</h2>
+      <p style="font-size:15px;color:var(--text-secondary);max-width:480px;margin:0 auto 24px;line-height:1.6">We host presentations from verified aerospace and defence professionals, researchers and organisations. Reach 2.4 million monthly readers.</p>
+      <button class="btn btn-orange btn-lg" onclick="showToast('📬 Opening submission portal...')">Submit Your Presentation</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">AFTER<span>BURNER</span></div>
+        <p class="footer-desc">The world's sharpest aerospace and defence intelligence platform.</p>
+        <div class="social-links"><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">♪</a><a href="#" class="social-btn">◉</a></div>
+      </div>
+      <div><div class="footer-col-title">Presentations</div><ul class="footer-links"><li><a href="presentations.html" class="footer-link">All Presentations</a></li><li><a href="presentations.html" class="footer-link">Strategy</a></li><li><a href="presentations.html" class="footer-link">Technology</a></li><li><a href="presentations.html" class="footer-link">Industry</a></li></ul></div>
+      <div><div class="footer-col-title">Media</div><ul class="footer-links"><li><a href="articles.html" class="footer-link">Articles</a></li><li><a href="videos.html" class="footer-link">Videos</a></li><li><a href="podcasts.html" class="footer-link">Podcasts</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="#" class="footer-link">About</a></li><li><a href="#" class="footer-link">Contact</a></li><li><a href="#" class="footer-link">Advertise</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AFTERBURNER Media Ltd. All rights reserved.</div>
+      <div class="footer-badges"><span class="badge badge-blue">📰 Press Accredited</span><span class="badge badge-gold">🏆 Best Defence Outlet 2025</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

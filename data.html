@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data & Intelligence — AFTERBURNER</title>
+  <meta name="description" content="Aerospace and defence data dashboards, trackers and intelligence from AFTERBURNER." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .data-hero-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:48px; }
+    .kpi-card {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg);
+      padding:24px; text-align:center;
+    }
+    .kpi-icon  { font-size:28px; margin-bottom:8px; }
+    .kpi-val   { font-family:var(--font-display); font-size:36px; font-weight:900; color:var(--accent-blue); display:block; }
+    .kpi-label { font-size:12px; color:var(--text-secondary); margin-top:4px; }
+    .kpi-delta { font-size:11px; margin-top:4px; }
+    .kpi-up    { color:#00c864; }
+    .kpi-down  { color:#ff4444; }
+    .tracker-table { width:100%; border-collapse:collapse; }
+    .tracker-table th {
+      font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em;
+      color:var(--text-muted); padding:12px 16px; text-align:left;
+      border-bottom:1px solid var(--border); background:var(--bg-secondary);
+    }
+    .tracker-table td { padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.04); font-size:14px; }
+    .tracker-table tr:hover td { background:var(--bg-card-hover); }
+    .tracker-table tr:last-child td { border-bottom:none; }
+    .status-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+    .status-op  { background:#00c864; }
+    .status-dev { background:var(--accent-gold); }
+    .status-test{ background:var(--accent-blue); }
+    .status-can { background:#ff4444; }
+    @media(max-width:768px){ .data-hero-cards{grid-template-columns:repeat(2,1fr);} }
+  </style>
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-label">⚡ DATA LIVE</div>
+  <div class="ticker-track">
+    <span class="ticker-item">Global defence spend now tracking at $2.44tn for 2026</span>
+    <span class="ticker-item">New hypersonic tracker: 14 programmes across 6 nations</span>
+    <span class="ticker-item">SIPRI dataset updated — Apr 2026</span>
+    <span class="ticker-item">F-35 fleet: 12 new deliveries confirmed this month</span>
+    <span class="ticker-item">Space launch tracker: 87 launches YTD</span>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">AFTER<span>BURNER</span></div>
+      <div class="logo-tagline">Aerospace &amp; Defence Intelligence</div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="articles.html" class="nav-link"><span class="nav-icon">📰</span> Articles</a></li>
+      <li><a href="videos.html" class="nav-link"><span class="nav-icon">🎬</span> Videos</a></li>
+      <li><a href="podcasts.html" class="nav-link"><span class="nav-icon">🎙️</span> Podcasts</a></li>
+      <li><a href="data.html" class="nav-link active"><span class="nav-icon">📊</span> Data</a></li>
+      <li><a href="presentations.html" class="nav-link"><span class="nav-icon">📽️</span> Presentations</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button class="search-btn" id="searchBtn">🔍</button>
+      <a href="index.html#newsletter" class="btn btn-orange btn-sm">Get The Brief</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input class="search-input" id="searchInput" type="text" placeholder="Search data..." />
+    <button class="search-close" id="searchClose">✕</button>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="page-hero">
+      <div>
+        <div class="page-hero-label">📊 Intelligence Dashboard</div>
+        <h1 class="page-hero-title">Data & Intelligence</h1>
+        <p class="page-hero-sub">Curated datasets, live trackers and intelligence dashboards covering global defence spending, fleet numbers, programme status and more. Updated weekly.</p>
+      </div>
+    </div>
+
+    <!-- KPI CARDS -->
+    <div class="data-hero-cards">
+      <div class="kpi-card">
+        <div class="kpi-icon">💰</div>
+        <span class="kpi-val" data-count="2440" data-prefix="$" data-suffix="bn"></span>
+        <div class="kpi-label">Global Defence Spend 2026</div>
+        <div class="kpi-delta kpi-up">▲ 8.4% vs 2025</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">✈️</div>
+        <span class="kpi-val" data-count="55000" data-suffix="+">—</span>
+        <div class="kpi-label">Military Aircraft Worldwide</div>
+        <div class="kpi-delta kpi-up">▲ 2.1% YoY</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🚀</div>
+        <span class="kpi-val" data-count="87">—</span>
+        <div class="kpi-label">Space Launches YTD 2026</div>
+        <div class="kpi-delta kpi-up">▲ 12 vs same period 2025</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🤝</div>
+        <span class="kpi-val" data-count="142">—</span>
+        <div class="kpi-label">Active Arms Transfers (Major)</div>
+        <div class="kpi-delta kpi-down">▼ 3 vs last quarter</div>
+      </div>
+    </div>
+
+    <!-- CHARTS ROW -->
+    <div class="section-header">
+      <h2 class="section-title">Defence Spending Breakdown</h2>
+      <span class="badge badge-blue">Source: SIPRI Apr 2026</span>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:48px">
+
+      <div class="data-card">
+        <div class="data-card-header">
+          <div>
+            <div class="data-card-title">Top 10 by Budget</div>
+            <div class="text-small text-muted">USD billions, FY 2026</div>
+          </div>
+        </div>
+        <div class="chart-bar-list">
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇺🇸 USA</span><span>$916bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:100%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇨🇳 China</span><span>$296bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:32%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇷🇺 Russia</span><span>$109bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:12%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇬🇧 UK</span><span>$74bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:8%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇩🇪 Germany</span><span>$66bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:7%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇸🇦 Saudi Arabia</span><span>$75bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-green" style="width:8%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇮🇳 India</span><span>$81bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-purple" style="width:9%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇫🇷 France</span><span>$58bn</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:6%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-header">
+          <div>
+            <div class="data-card-title">% GDP on Defence</div>
+            <div class="text-small text-muted">NATO and key allies</div>
+          </div>
+          <span class="badge badge-orange">NATO Target 2%</span>
+        </div>
+        <div class="chart-bar-list">
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇵🇱 Poland</span><span>4.1%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:100%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇺🇸 USA</span><span>3.4%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:83%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇬🇧 UK</span><span>2.5%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:61%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇩🇪 Germany</span><span>2.1%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:51%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇫🇷 France</span><span>2.0%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:49%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇮🇹 Italy</span><span>1.6%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-green" style="width:39%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇪🇸 Spain</span><span>1.4%</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:34%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-header">
+          <div>
+            <div class="data-card-title">5th-Gen Fleet Size</div>
+            <div class="text-small text-muted">Operational aircraft, by nation</div>
+          </div>
+        </div>
+        <div class="chart-bar-list">
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇺🇸 F-35 (all)</span><span>680+</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:100%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇨🇳 J-20</span><span>200+</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:29%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇺🇸 F-22</span><span>186</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:27%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇯🇵 F-35 (JASDF)</span><span>42</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:6%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇬🇧 F-35B (RAF/RN)</span><span>36</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:5%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇷🇺 Su-57</span><span>24</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:4%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇰🇷 KF-21</span><span>12</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-green" style="width:2%"></div></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROGRAMME TRACKER -->
+    <div class="section-header">
+      <h2 class="section-title">Programme Status Tracker</h2>
+      <span class="badge badge-green">Updated Apr 18, 2026</span>
+    </div>
+
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:48px">
+      <table class="tracker-table">
+        <thead>
+          <tr>
+            <th>Programme</th>
+            <th>Nation</th>
+            <th>Domain</th>
+            <th>Status</th>
+            <th>Est. IOC</th>
+            <th>Reported Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>F-47 NGAD</strong></td>
+            <td>🇺🇸 USA</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-dev"></span>CDR Passed</td>
+            <td>2030</td>
+            <td>Classified</td>
+          </tr>
+          <tr>
+            <td><strong>B-21 Raider</strong></td>
+            <td>🇺🇸 USA</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-op"></span>IOC Declared</td>
+            <td>2023 ✓</td>
+            <td>~$750m/unit</td>
+          </tr>
+          <tr>
+            <td><strong>SSN-AUKUS</strong></td>
+            <td>🇦🇺🇬🇧 AUS/UK</td>
+            <td><span class="badge badge-blue">Naval</span></td>
+            <td><span class="status-dot status-dev"></span>Design Phase</td>
+            <td>2039</td>
+            <td>~$368bn total</td>
+          </tr>
+          <tr>
+            <td><strong>GCAP / Tempest</strong></td>
+            <td>🇬🇧🇯🇵🇮🇹 UK/JP/IT</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-dev"></span>SDD Phase</td>
+            <td>2035</td>
+            <td>$30bn+ est.</td>
+          </tr>
+          <tr>
+            <td><strong>SCAF / NGF</strong></td>
+            <td>🇫🇷🇩🇪🇪🇸 FR/DE/ES</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-dev"></span>Phase 1B</td>
+            <td>2040</td>
+            <td>TBC</td>
+          </tr>
+          <tr>
+            <td><strong>Type 083 Submarine</strong></td>
+            <td>🇨🇳 China</td>
+            <td><span class="badge badge-blue">Naval</span></td>
+            <td><span class="status-dot status-test"></span>Sea Trials</td>
+            <td>2027</td>
+            <td>Classified</td>
+          </tr>
+          <tr>
+            <td><strong>Lynx IFV (BW)</strong></td>
+            <td>🇩🇪 Germany</td>
+            <td><span class="badge badge-orange">Land</span></td>
+            <td><span class="status-dot status-op"></span>Contract Signed</td>
+            <td>2027</td>
+            <td>€4.2bn</td>
+          </tr>
+          <tr>
+            <td><strong>T-7A Red Hawk</strong></td>
+            <td>🇺🇸 USA</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-op"></span>Full-Rate Production</td>
+            <td>2024 ✓</td>
+            <td>$813m (LRIP)</td>
+          </tr>
+          <tr>
+            <td><strong>IFPC-HEL (Laser)</strong></td>
+            <td>🇺🇸 USA</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-test"></span>Field Trials</td>
+            <td>2026</td>
+            <td>$250m (demo)</td>
+          </tr>
+          <tr>
+            <td><strong>KF-21 Boramae</strong></td>
+            <td>🇰🇷 South Korea</td>
+            <td><span class="badge badge-orange">Air</span></td>
+            <td><span class="status-dot status-op"></span>Limited Production</td>
+            <td>2026</td>
+            <td>$7.8bn programme</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HYPERSONIC TRACKER -->
+    <div class="section-header">
+      <h2 class="section-title">Hypersonic Weapons Tracker</h2>
+      <span class="badge badge-red">Live</span>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:56px">
+      <div class="data-card">
+        <div class="data-card-header">
+          <div><div class="data-card-title">Programmes by Nation</div><div class="text-small text-muted">Operational + in development</div></div>
+        </div>
+        <div class="chart-bar-list">
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇨🇳 China</span><span>4 operational, 3 in dev.</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-orange" style="width:100%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇷🇺 Russia</span><span>3 operational, 2 in dev.</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-red" style="width:71%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇺🇸 USA</span><span>0 operational, 6 in dev.</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:43%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇮🇳 India</span><span>1 in dev.</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-gold" style="width:14%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇦🇺🇬🇧 AUKUS</span><span>1 planned</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-green" style="width:7%"></div></div></div>
+          <div class="chart-bar-item"><div class="chart-bar-label"><span>🇫🇷 France</span><span>1 in dev. (ASN4G)</span></div><div class="chart-bar-track"><div class="chart-bar-fill bar-blue" style="width:7%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-header">
+          <div><div class="data-card-title">Key Systems</div><div class="text-small text-muted">Status as of Apr 2026</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:13px">
+            <span><strong>🇨🇳 DF-17 (HGV)</strong></span><span class="badge badge-green">Operational</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:13px">
+            <span><strong>🇷🇺 Avangard (HGV)</strong></span><span class="badge badge-green">Operational</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:13px">
+            <span><strong>🇷🇺 Kinzhal (ALBM)</strong></span><span class="badge badge-green">Operational</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:13px">
+            <span><strong>🇺🇸 LRHW (Dark Eagle)</strong></span><span class="badge badge-blue">Testing</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:13px">
+            <span><strong>🇺🇸 HACM (ARRW successor)</strong></span><span class="badge badge-gold">Development</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:13px">
+            <span><strong>🇮🇳 Shaurya-2</strong></span><span class="badge badge-gold">Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">AFTER<span>BURNER</span></div>
+        <p class="footer-desc">The world's sharpest aerospace and defence intelligence platform.</p>
+        <div class="social-links"><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">♪</a><a href="#" class="social-btn">◉</a></div>
+      </div>
+      <div><div class="footer-col-title">Dashboards</div><ul class="footer-links"><li><a href="data.html" class="footer-link">Defence Spending</a></li><li><a href="data.html" class="footer-link">Programme Tracker</a></li><li><a href="data.html" class="footer-link">Hypersonic Tracker</a></li><li><a href="data.html" class="footer-link">Fleet Numbers</a></li></ul></div>
+      <div><div class="footer-col-title">Media</div><ul class="footer-links"><li><a href="articles.html" class="footer-link">Articles</a></li><li><a href="videos.html" class="footer-link">Videos</a></li><li><a href="podcasts.html" class="footer-link">Podcasts</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="#" class="footer-link">About</a></li><li><a href="#" class="footer-link">Contact</a></li><li><a href="#" class="footer-link">Advertise</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AFTERBURNER Media Ltd. All rights reserved.</div>
+      <div class="footer-badges"><span class="badge badge-blue">📰 Press Accredited</span><span class="badge badge-gold">🏆 Best Defence Outlet 2025</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

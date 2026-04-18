@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcasts — AFTERBURNER</title>
+  <meta name="description" content="Aerospace and defence podcasts from AFTERBURNER — expert interviews, analysis and briefings." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .shows-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 48px; }
+    .show-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s;
+    }
+    .show-card:hover { transform: translateY(-3px); border-color: rgba(168,85,247,0.4); }
+    .show-art { width: 88px; height: 88px; border-radius: 12px; margin: 0 auto 14px; display:flex;align-items:center;justify-content:center;font-size:36px; }
+    .show-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .show-desc { font-size: 12px; color: var(--text-secondary); }
+    .show-eps  { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+    .ep-list { display: flex; flex-direction: column; gap: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .ep-item {
+      display: flex; gap: 16px; align-items: center; padding: 18px 20px;
+      border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.2s;
+    }
+    .ep-item:last-child { border-bottom: none; }
+    .ep-item:hover { background: var(--bg-card-hover); }
+    .ep-num { font-family: var(--font-display); font-size: 24px; font-weight: 800; color: var(--text-muted); min-width: 44px; }
+    .ep-info { flex: 1; }
+    .ep-show { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #a855f7; margin-bottom: 3px; }
+    .ep-title { font-size: 15px; font-weight: 700; line-height: 1.35; margin-bottom: 5px; }
+    .ep-meta  { font-size: 12px; color: var(--text-secondary); display: flex; gap: 10px; align-items: center; }
+    .ep-play  {
+      width: 42px; height: 42px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.3);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: #a855f7; flex-shrink: 0; transition: all 0.2s;
+    }
+    .ep-item:hover .ep-play { background: #a855f7; color: #fff; }
+    @media(max-width:768px){ .shows-grid{grid-template-columns:repeat(2,1fr);} }
+  </style>
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-label">⚡ LIVE FEED</div>
+  <div class="ticker-track">
+    <span class="ticker-item">NEW EPISODE: General Walsh on Multi-Domain Operations — Ep. 147</span>
+    <span class="ticker-item">Tech Debrief Ep.89 — Is AI ready for the battlefield?</span>
+    <span class="ticker-item">Subscribe on Spotify, Apple Podcasts and everywhere you listen</span>
+    <span class="ticker-item">Space Brief Ep.33 — Starshield vs the alternatives</span>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">AFTER<span>BURNER</span></div>
+      <div class="logo-tagline">Aerospace &amp; Defence Intelligence</div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="articles.html" class="nav-link"><span class="nav-icon">📰</span> Articles</a></li>
+      <li><a href="videos.html" class="nav-link"><span class="nav-icon">🎬</span> Videos</a></li>
+      <li><a href="podcasts.html" class="nav-link active"><span class="nav-icon">🎙️</span> Podcasts</a></li>
+      <li><a href="data.html" class="nav-link"><span class="nav-icon">📊</span> Data</a></li>
+      <li><a href="presentations.html" class="nav-link"><span class="nav-icon">📽️</span> Presentations</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button class="search-btn" id="searchBtn">🔍</button>
+      <a href="index.html#newsletter" class="btn btn-orange btn-sm">Get The Brief</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input class="search-input" id="searchInput" type="text" placeholder="Search podcasts..." />
+    <button class="search-close" id="searchClose">✕</button>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="page-hero">
+      <div>
+        <div class="page-hero-label">🎙️ Audio Intelligence</div>
+        <h1 class="page-hero-title">Podcasts</h1>
+        <p class="page-hero-sub">Deep conversations with the people shaping aerospace and defence. Generals, engineers, analysts and policymakers — no PR filters, no prepared scripts.</p>
+      </div>
+      <div class="filter-bar mt-24">
+        <button class="filter-btn active">All Shows</button>
+        <button class="filter-btn">The Afterburner Podcast</button>
+        <button class="filter-btn">Tech Debrief</button>
+        <button class="filter-btn">Global Security Brief</button>
+        <button class="filter-btn">Space Brief</button>
+        <button class="filter-btn">The Hot Take</button>
+      </div>
+    </div>
+
+    <!-- SHOWS -->
+    <div class="section-header">
+      <h2 class="section-title">Our Shows</h2>
+    </div>
+    <div class="shows-grid">
+
+      <div class="show-card" onclick="showToast('🎙️ The Afterburner Podcast — 147 episodes')">
+        <div class="show-art" style="background:linear-gradient(135deg,#1a0d2e,#2d1a4a);">🎙️</div>
+        <div class="show-name">The Afterburner Podcast</div>
+        <div class="show-desc">Flagship show. Long-form interviews with defence's biggest names.</div>
+        <div class="show-eps">147 episodes</div>
+      </div>
+
+      <div class="show-card" onclick="showToast('💡 Tech Debrief — 89 episodes')">
+        <div class="show-art" style="background:linear-gradient(135deg,#002a1a,#004a2a);">💡</div>
+        <div class="show-name">Tech Debrief</div>
+        <div class="show-desc">Where defence technology meets plain English. Weekly.</div>
+        <div class="show-eps">89 episodes</div>
+      </div>
+
+      <div class="show-card" onclick="showToast('🌍 Global Security Brief — 62 episodes')">
+        <div class="show-art" style="background:linear-gradient(135deg,#1a1500,#2a2200);">🌍</div>
+        <div class="show-name">Global Security Brief</div>
+        <div class="show-desc">Geopolitics, strategy and the defence implications you need to know.</div>
+        <div class="show-eps">62 episodes</div>
+      </div>
+
+      <div class="show-card" onclick="showToast('🚀 Space Brief — 33 episodes')">
+        <div class="show-art" style="background:linear-gradient(135deg,#1a0000,#2a0000);">🚀</div>
+        <div class="show-name">Space Brief</div>
+        <div class="show-desc">The militarisation of space, commercial launch and orbital warfare.</div>
+        <div class="show-eps">33 episodes</div>
+      </div>
+
+    </div>
+
+    <!-- EPISODE LIST -->
+    <div class="section-header">
+      <h2 class="section-title">Latest Episodes</h2>
+    </div>
+    <div class="ep-list" style="margin-bottom:40px">
+
+      <div class="ep-item">
+        <div class="ep-num">147</div>
+        <div class="ep-info">
+          <div class="ep-show">The Afterburner Podcast</div>
+          <div class="ep-title">General (Ret.) David Walsh on the Future of Multi-Domain Operations</div>
+          <div class="ep-meta">
+            <span>⏱ 58 min</span><span>·</span>
+            <span>Apr 17, 2026</span><span>·</span>
+            <span>🎧 34,200 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing Episode 147...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">89</div>
+        <div class="ep-info">
+          <div class="ep-show">Tech Debrief</div>
+          <div class="ep-title">Is AI Really Ready for the Battlefield? We Ask the People Building It</div>
+          <div class="ep-meta">
+            <span>⏱ 44 min</span><span>·</span>
+            <span>Apr 15, 2026</span><span>·</span>
+            <span>🎧 21,400 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing Tech Debrief Ep.89...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">62</div>
+        <div class="ep-info">
+          <div class="ep-show">Global Security Brief</div>
+          <div class="ep-title">Post-Ukraine Europe: How the Continent Is Rebuilding Its Defence Industrial Base</div>
+          <div class="ep-meta">
+            <span>⏱ 52 min</span><span>·</span>
+            <span>Apr 12, 2026</span><span>·</span>
+            <span>🎧 18,700 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing GSB Ep.62...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">33</div>
+        <div class="ep-info">
+          <div class="ep-show">Space Brief</div>
+          <div class="ep-title">Starshield vs. the Alternatives: Commercialising the Military Space Race</div>
+          <div class="ep-meta">
+            <span>⏱ 38 min</span><span>·</span>
+            <span>Apr 10, 2026</span><span>·</span>
+            <span>🎧 15,100 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing Space Brief Ep.33...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">146</div>
+        <div class="ep-info">
+          <div class="ep-show">The Afterburner Podcast</div>
+          <div class="ep-title">Ex-VCDS Air Marshal Sir Hugh Rankin: The RAF's 2035 Problem</div>
+          <div class="ep-meta">
+            <span>⏱ 64 min</span><span>·</span>
+            <span>Apr 10, 2026</span><span>·</span>
+            <span>🎧 29,800 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing Episode 146...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">88</div>
+        <div class="ep-info">
+          <div class="ep-show">Tech Debrief</div>
+          <div class="ep-title">Quantum Radar: Real Breakthrough or Very Expensive Fantasy?</div>
+          <div class="ep-meta">
+            <span>⏱ 36 min</span><span>·</span>
+            <span>Apr 8, 2026</span><span>·</span>
+            <span>🎧 16,200 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing Tech Debrief Ep.88...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">61</div>
+        <div class="ep-info">
+          <div class="ep-show">Global Security Brief</div>
+          <div class="ep-title">China's Military Modernisation: What the 2025 White Paper Really Says</div>
+          <div class="ep-meta">
+            <span>⏱ 48 min</span><span>·</span>
+            <span>Apr 5, 2026</span><span>·</span>
+            <span>🎧 22,500 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing GSB Ep.61...')">▶</div>
+      </div>
+
+      <div class="ep-item">
+        <div class="ep-num">145</div>
+        <div class="ep-info">
+          <div class="ep-show">The Afterburner Podcast</div>
+          <div class="ep-title">The Drone Industrial Complex: Interview with Anduril's Head of Programmes</div>
+          <div class="ep-meta">
+            <span>⏱ 71 min</span><span>·</span>
+            <span>Apr 3, 2026</span><span>·</span>
+            <span>🎧 41,900 plays</span>
+          </div>
+        </div>
+        <div class="ep-play" onclick="showToast('▶ Playing Episode 145...')">▶</div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <div style="background:linear-gradient(135deg,#1a0d2e,#2d1a4a);border:1px solid rgba(168,85,247,0.25);border-radius:var(--radius-lg);padding:40px;text-align:center;margin-bottom:56px">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a855f7;margin-bottom:10px">🎙️ Subscribe</div>
+      <h2 style="font-family:var(--font-display);font-size:36px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Never Miss an Episode</h2>
+      <p style="font-size:15px;color:var(--text-secondary);max-width:480px;margin:0 auto 28px">New episodes land every Tuesday and Thursday. Subscribe on your preferred platform and we'll find you wherever you listen.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-ghost" onclick="showToast('Opening Spotify...')">🎵 Spotify</button>
+        <button class="btn btn-ghost" onclick="showToast('Opening Apple Podcasts...')">🎧 Apple Podcasts</button>
+        <button class="btn btn-ghost" onclick="showToast('Opening Google Podcasts...')">🎙️ Google Podcasts</button>
+        <button class="btn btn-ghost" onclick="showToast('📋 RSS feed copied!')">◉ RSS Feed</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">AFTER<span>BURNER</span></div>
+        <p class="footer-desc">The world's sharpest aerospace and defence intelligence platform.</p>
+        <div class="social-links"><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">♪</a><a href="#" class="social-btn">◉</a></div>
+      </div>
+      <div><div class="footer-col-title">Shows</div><ul class="footer-links"><li><a href="podcasts.html" class="footer-link">The Afterburner Podcast</a></li><li><a href="podcasts.html" class="footer-link">Tech Debrief</a></li><li><a href="podcasts.html" class="footer-link">Global Security Brief</a></li><li><a href="podcasts.html" class="footer-link">Space Brief</a></li></ul></div>
+      <div><div class="footer-col-title">Media</div><ul class="footer-links"><li><a href="articles.html" class="footer-link">Articles</a></li><li><a href="videos.html" class="footer-link">Videos</a></li><li><a href="data.html" class="footer-link">Data</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="#" class="footer-link">About</a></li><li><a href="#" class="footer-link">Contact</a></li><li><a href="#" class="footer-link">Advertise</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AFTERBURNER Media Ltd. All rights reserved.</div>
+      <div class="footer-badges"><span class="badge badge-blue">📰 Press Accredited</span><span class="badge badge-gold">🏆 Best Defence Outlet 2025</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
